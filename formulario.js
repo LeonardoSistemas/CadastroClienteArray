@@ -16,4 +16,6 @@ function salvardadosobjeto(){
 
 function inserirobjetonoarray(){
     arrayCadastro.push(objCadastro);
+
+    console.table(arrayCadastro);
 }
