@@ -1,0 +1,3 @@
+let objCadastro = {}
+let arrayCadastro = []
+
