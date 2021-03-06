@@ -16,20 +16,28 @@ function salvardadosobjeto(){
 
 function inserirobjetonoarray(){
     arrayCadastro.push(objCadastro);
-    exibirarraynatabela()  
+    console.table(arrayCadastro)
+    exibirdadosdoarraynatabela()  
 }
 
-function exibirarraynatabela(){
-    let linhaarrayparatabela = ''
+function exibirdadosdoarraynatabela(){
+
+    tabela = document.getElementById("tblCadastro");
+    var linha   = tabela.insertRow(-1);
+    var coluna1 = linha.insertCell(0);
+    var coluna2 = linha.insertCell(1);
+    var coluna3 = linha.insertCell(2);
+    var coluna4 = linha.insertCell(3);
+    var coluna5 = linha.insertCell(4);
+    var coluna6 = linha.insertCell(5);
+    
 
     arrayCadastro.forEach(function(elemento){
-        linhaarrayparatabela = `<tr>
-                                    <th scope="row">${elemento.Nome}</th>
-                                    <td>${elemento.Email}</td>
-                                    <td>${elemento.Endereco}</td>
-                                    <td>${elemento.Endereco2}</td>
-                                    <td>${elemento.Telefone}</td>
-                                    <td>${elemento.Celular}</td>
-                                </tr>`
+        coluna1.innerHTML = elemento.Nome;
+        coluna2.innerHTML = elemento.Email;
+        coluna3.innerHTML = elemento.Endereco;
+        coluna4.innerHTML = elemento.Endereco2;
+        coluna5.innerHTML = elemento.Telefone;
+        coluna6.innerHTML = elemento.Celular;
     })
 }
