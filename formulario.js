@@ -16,6 +16,20 @@ function salvardadosobjeto(){
 
 function inserirobjetonoarray(){
     arrayCadastro.push(objCadastro);
+    exibirarraynatabela()  
+}
 
-    console.table(arrayCadastro);
+function exibirarraynatabela(){
+    let linhaarrayparatabela = ''
+
+    arrayCadastro.forEach(function(elemento){
+        linhaarrayparatabela = `<tr>
+                                    <th scope="row">${elemento.Nome}</th>
+                                    <td>${elemento.Email}</td>
+                                    <td>${elemento.Endereco}</td>
+                                    <td>${elemento.Endereco2}</td>
+                                    <td>${elemento.Telefone}</td>
+                                    <td>${elemento.Celular}</td>
+                                </tr>`
+    })
 }
